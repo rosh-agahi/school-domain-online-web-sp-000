@@ -1,16 +1,20 @@
 # code here!
-class School 
-  attr_accessor :name 
-  
-  
+
+class School
+  attr_reader :roster
+
   def initialize(name)
     @name = name
-    roster = Hash.new
-  end
+    @roster = {}
+  end 
   
-  def add_student(student_name,grade)
-    roster[grade] << student_name
+  def add_student(name, grade)
+    @roster[grade] = [name]
   end
 
-  
+  def sort 
+    @roster.each do |key, value|
+      value.sort!
+    end
+  end
 end
