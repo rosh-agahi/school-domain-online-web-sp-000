@@ -9,7 +9,7 @@ class School
   end 
   
   def add_student(name, grade)
-    @roster[grade] = [name]
+    @roster.merge(grade: name)
   end
   
 end
