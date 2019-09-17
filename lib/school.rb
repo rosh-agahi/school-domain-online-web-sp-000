@@ -23,7 +23,9 @@ class School
   def sort 
     @roster.keys.sort
     @roster.each do |gr|
-      @roster[gr].sort
+      @roster[gr].sort do |a,b|
+        a <=> b
+      end
     end
   end 
   
