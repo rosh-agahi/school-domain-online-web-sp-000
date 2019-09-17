@@ -5,7 +5,7 @@ class School
   
   def initialize(name)
     @name = name
-    roster = Hash.new
+    roster = {}
   end
   
   def add_student(student_name,grade)
